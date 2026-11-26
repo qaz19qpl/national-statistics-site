@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatAtlas — National Statistics Explorer</title>
+<meta name="description" content="StatAtlas puts the headline statistics of twelve countries side by side: population, GDP, life expectancy, unemployment and more, each figure with its source and year.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#/">Stat<span>Atlas</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#/">Countries</a>
+      <a href="#/rankings">Rankings</a>
+      <a href="#/compare">Compare</a>
+      <a href="#/sources">Sources &amp; methods</a>
+    </nav>
+    <p class="tagline">National statistics, checked and cited</p>
+  </div>
+</header>
+<main id="view" aria-live="polite">
+  <section class="hero">
+    <h1>How big, how rich, how long do we live?</h1>
+    <p class="lede">StatAtlas is loading the numbers for twelve countries&hellip;</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>StatAtlas — an original reference site. Figures: World Bank World Development Indicators (GDP 2024, life expectancy 2023), United Nations World Population Prospects 2024, International Labour Organization (unemployment 2024).</p>
+    <p><a href="#/sources">Sources &amp; methods</a> &middot; All figures carry their source and reference year on the page where they appear.</p>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="views.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

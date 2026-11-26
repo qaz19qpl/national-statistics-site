@@ -1,0 +1,206 @@
+/* StatAtlas styles: one stylesheet, system fonts only, a deep-blue
+   and warm-orange palette on paper white. Layout is a single column
+   that widens on desktop and stacks on a phone. */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #17233b;
+  background: #f6f4ef;
+}
+
+a { color: #1d4ed8; }
+a:hover { color: #c2410c; }
+
+.site-header {
+  background: #17233b;
+  color: #fff;
+  padding: 14px 20px;
+}
+.site-header .wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 28px;
+}
+.brand {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-decoration: none;
+}
+.brand span { color: #f59e0b; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.site-header nav a {
+  color: #dbe4f5;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 4px 2px;
+}
+.site-header nav a:hover { color: #f59e0b; }
+.tagline { color: #9fb0d0; font-size: 14px; margin: 0; }
+
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+h1 { font-size: 34px; line-height: 1.15; margin: 6px 0 12px; letter-spacing: -0.5px; }
+h2 { font-size: 23px; margin: 26px 0 10px; }
+h3 { font-size: 19px; margin: 0 0 4px; }
+.lede { font-size: 19px; color: #3c4a63; max-width: 720px; }
+.muted { color: #667085; }
+.crumbs { font-size: 14px; color: #667085; margin: 0 0 4px; }
+
+.hero { border-bottom: 3px solid #1d4ed8; padding-bottom: 20px; margin-bottom: 8px; }
+.hero h1 { font-size: 40px; }
+
+.search { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; }
+.search label { font-weight: 700; }
+.search input {
+  flex: 1 1 260px;
+  min-width: 0;
+  font: inherit;
+  padding: 10px 12px;
+  border: 2px solid #94a3b8;
+  border-radius: 8px;
+  background: #fff;
+}
+.search input:focus { outline: 3px solid #f59e0b; border-color: #1d4ed8; }
+button, .button {
+  font: inherit;
+  font-weight: 700;
+  background: #1d4ed8;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+button:hover, .button:hover { background: #c2410c; color: #fff; }
+
+.panel {
+  background: #fff;
+  border: 1px solid #e2ddd2;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 22px 0;
+}
+.panel h2 { margin-top: 0; }
+
+.top-three { font-size: 19px; padding-left: 22px; margin: 6px 0; }
+.top-three li { margin: 6px 0; }
+
+.metric-picker { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
+.metric-picker button {
+  background: #eef2f7;
+  color: #17233b;
+  border: 1px solid #cbd5e1;
+  padding: 7px 12px;
+  font-size: 15px;
+}
+.metric-picker button.active { background: #17233b; color: #fff; border-color: #17233b; }
+
+.chart { width: 100%; height: auto; display: block; }
+.chart-label { font-size: 13px; fill: #3c4a63; font-family: inherit; }
+.chart-value { font-size: 13px; font-weight: 700; fill: #17233b; font-family: inherit; }
+.chart-title { font-size: 15px; font-weight: 700; fill: #17233b; font-family: inherit; }
+.chart-legend { font-size: 13px; font-weight: 700; font-family: inherit; }
+.chart-grid { stroke: #e5e7eb; stroke-width: 1; }
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.country-card {
+  background: #fff;
+  border: 1px solid #e2ddd2;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+.country-card a { text-decoration: none; color: inherit; display: block; }
+.country-card a:hover h3 { color: #c2410c; }
+.country-card dl { margin: 10px 0; display: grid; gap: 4px; }
+.country-card dl div { display: flex; justify-content: space-between; gap: 12px; }
+.country-card dt { color: #667085; }
+.country-card dd { margin: 0; font-weight: 700; }
+.card-more { color: #1d4ed8; font-weight: 700; font-size: 15px; }
+.empty { font-size: 18px; padding: 20px 0; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+.stat-card {
+  background: #fff;
+  border: 1px solid #e2ddd2;
+  border-top: 4px solid #1d4ed8;
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.stat-card:hover { border-top-color: #c2410c; }
+.stat-label { display: block; font-weight: 700; font-size: 15px; }
+.stat-value { display: block; font-size: 30px; font-weight: 800; margin: 4px 0; letter-spacing: -0.5px; }
+.stat-about { display: block; font-size: 15px; color: #3c4a63; }
+.stat-source { display: block; font-size: 13px; color: #667085; margin-top: 8px; }
+
+.data-table { width: 100%; border-collapse: collapse; font-size: 15px; background: #fff; }
+.data-table caption { text-align: left; font-weight: 700; padding: 8px 0; }
+.data-table th, .data-table td { border-bottom: 1px solid #e2ddd2; padding: 9px 10px; text-align: left; }
+.data-table thead th { background: #17233b; color: #fff; white-space: nowrap; }
+.data-table thead th a { color: #fff; text-decoration: none; }
+.data-table thead th a:hover { color: #f59e0b; }
+.data-table tbody tr:hover { background: #f1f5fb; }
+.table-scroll { overflow-x: auto; }
+
+.compare-form { background: #fff; border: 1px solid #e2ddd2; border-radius: 12px; padding: 18px 20px; margin: 16px 0; }
+.picker-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 14px; }
+.picker-row label { font-weight: 700; display: flex; flex-direction: column; gap: 6px; }
+.picker-row select {
+  font: inherit;
+  padding: 9px 10px;
+  border: 2px solid #94a3b8;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 180px;
+}
+
+.source-note { font-size: 14px; color: #667085; margin: 10px 0 0; }
+.source-list li { margin: 12px 0; }
+
+.site-footer {
+  background: #17233b;
+  color: #9fb0d0;
+  padding: 22px 20px;
+  font-size: 14px;
+}
+.site-footer .wrap { max-width: 1020px; margin: 0 auto; }
+.site-footer a { color: #f5c86b; }
+.site-footer p { margin: 6px 0; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 { font-size: 28px; }
+  .hero h1 { font-size: 30px; }
+  .lede { font-size: 17px; }
+  main { padding: 20px 14px 48px; }
+  .panel { padding: 16px; }
+  .stat-value { font-size: 26px; }
+  .data-table { font-size: 14px; }
+  .data-table th, .data-table td { padding: 7px 6px; }
+}
